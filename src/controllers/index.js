@@ -99,9 +99,11 @@ var hostPage1 = function(req, res) {
 
         //return success
         return res.render('page1', {cats:docs}); 
+        //return res.render('page1', {dogs:docs}); 
     };
     
     readAllCats(req, res, callback); 
+   // readAllDogs(req, res, callback); 
 };
 
 //function to handle requests to the page2 page
@@ -122,7 +124,7 @@ var hostPage3 = function(req, res) {
     //Additionally, you don't need .jade because you registered the file type in the app.js as jade. Calling res.render('index')
     //actually calls index.jade. A second parameter of JSON can be passed into the jade to be used as variables with #{varName}
     
-    /*
+  /*  
     var callback = function(err, docs) {
         if(err) {
             return res.json({err:err}); //if error, return it 
